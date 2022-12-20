@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add admissions page</title>
+
+<link rel="stylesheet" href="{% static "stylesheet/style.css" %}"/>
+
+</head>
+<body>
+<h2>
+<img src="{% static "image/image.jpg.webp" %}" alt="Image Not Found"/>
+Ganesh High School
+</h2>
+<br/>
+<hr/>
+<br/>
+<br/>
+<div class="module">
+<h1>ADMISSION</h1><br/>
+<a href="/hello/newadm"><button type="button" name="button">Add Admission</button></a><br/><br/>
+<a href="/hello/admReport"><button type="button" name="button">Admission Report</button></a><br/><br/>
+
+</div>
+
+<div class="module">
+<h1>FINANCE</h1><br/>
+<a href="/hi/fee"><button type="button" name="button">Fee Collection</button></a><br/><br/>
+<a href="/hi/feedues"><button type="button" name="button">Fee Collection Report</button></a><br/><br/>
+<a href="/hi/feeCR"><button type="button" name="button">Fee Dues Report</button></a>
+</div>
+
+<br/><br/>
+
+
+<a href="/accounts/logout">Logout</a>
+
+<br/><br/>
+
+</body>
+</html>

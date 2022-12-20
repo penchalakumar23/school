@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add admissions page</title>
+
+<link rel="stylesheet" href="{% static "stylesheet/style.css" %}"/>
+
+</head>
+<body>
+<br bgcolor="yellow">
+<h1>Hello This is add admission page</h1>
+
+<img src="{% static "image/image.jpg.webp" %}" alt="Image Not Found"/>
+<h3>please fill below application form</h3><br>
+<form method="POST">
+<table>
+    {{form.as_table}}
+</table>
+
+<br/>
+<input type='submit' value="Add student">
+
+{%csrf_token%}
+</form>
+<br/><br/>
+{% for key,value in request.session.items %}
+{{key}}-{{value}}<br/>
+{% endfor %}
+</body>
+</html>

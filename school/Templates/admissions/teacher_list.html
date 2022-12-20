@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher page Report</title>
+
+</head>
+<body>
+
+<table border="gery">
+<tr>
+<th>id</th>
+<th>Teacher Name</th>
+<th>subject</th>
+<th>exp</th>
+<th>contact</th>
+<th>Actions</th>
+</tr>
+{% for s in teacher_list %}
+<tr>
+    <td><a href="/hello/getteachersdetails/{{s.id}}">{{s.id}}</a></td>
+    <td>{{s.Name}}</td>
+    <td>{{s.subject}}</td>
+    <td>{{s.exp}}</td>
+    <td>{{s.contact}}</td>
+    <td>
+
+        <a href="/hello/updateteacher/{{s.id}}">update</a> &nbsp;&nbsp;
+        <a href="/hello/deleteteacher/{{s.id}}">delete</a>
+    </td>
+
+{% endfor %}
+</tr>
+</table>
+</body>
+
+</html>
